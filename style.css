@@ -1,0 +1,145 @@
+/* ==========================================================================
+   1. VARIÁVEIS "DARK MODE"
+   ========================================================================== */
+:root {
+    --cor-fundo: #0A0A0A; /* Preto profundo */
+    --cor-fundo-card: #141414; /* Cinza muito escuro para contraste */
+    --cor-texto: #E0E0E0;
+    --cor-texto-mutado: #888888;
+    --cor-branco: #FFFFFF;
+    
+    --cor-neon: #D4FF00; /* Amarelo/Verde Neon bem Streetwear */
+    --cor-whatsapp: #25D366;
+    
+    --fonte: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--fonte);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+.mb-40 { margin-bottom: 40px; }
+
+/* ==========================================================================
+   2. CABEÇALHO E REDES SOCIAIS TOP
+   ========================================================================== */
+.header-dark {
+    background-color: rgba(10, 10, 10, 0.9);
+    border-bottom: 1px solid #333;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.8rem; font-weight: 900; color: var(--cor-branco); letter-spacing: 2px; }
+.logo span { color: var(--cor-neon); }
+
+.social-nav { display: flex; gap: 15px; }
+.social-nav a { color: var(--cor-branco); font-size: 1.2rem; transition: color 0.3s; }
+.social-nav a:hover { color: var(--cor-neon); }
+
+/* ==========================================================================
+   3. HERO (Estilo Capa de Revista)
+   ========================================================================== */
+.hero {
+    /* Troque o link abaixo por uma foto local depois (ex: img/modelo.jpg) */
+    background: linear-gradient(to right, #0A0A0A 20%, rgba(10,10,10,0.4)), url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&q=80&w=1200') center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.hero-texto { max-width: 600px; }
+.hero-texto h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; color: var(--cor-branco); }
+.hero-texto p { font-size: 1.2rem; margin-bottom: 40px; color: #CCC; }
+
+.btn-neon {
+    display: inline-block; padding: 15px 40px; background-color: var(--cor-neon);
+    color: var(--cor-fundo); font-weight: 900; text-transform: uppercase; text-decoration: none;
+    transition: all 0.3s; border-radius: 4px; letter-spacing: 1px;
+}
+.btn-neon:hover { box-shadow: 0 0 20px rgba(212, 255, 0, 0.5); transform: translateY(-3px); }
+
+/* ==========================================================================
+   4. REDES SOCIAIS E COMUNIDADE
+   ========================================================================== */
+.comunidade { padding: 80px 0; background-color: #111; }
+.comunidade h2 { font-size: 2.2rem; color: var(--cor-branco); }
+.subtitulo { color: var(--cor-texto-mutado); margin-bottom: 40px; }
+
+.grid-sociais { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.card-social {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 30px 20px; background-color: var(--cor-fundo-card); border-radius: 8px;
+    text-decoration: none; color: var(--cor-texto); transition: transform 0.3s;
+    border: 1px solid #222;
+}
+.card-social:hover { transform: translateY(-5px); border-color: var(--cor-neon); }
+.card-social i { font-size: 2.5rem; margin-bottom: 15px; }
+
+.insta i { color: #E1306C; }
+.tiktok i { color: #FFF; }
+.youtube i { color: #FF0000; }
+.discord i { color: #5865F2; }
+
+.card-social span { font-weight: 700; margin-bottom: 5px; }
+.card-social small { color: var(--cor-texto-mutado); font-size: 0.8rem; }
+
+/* ==========================================================================
+   5. ATENDIMENTO DIRETO (FUNCIONÁRIOS)
+   ========================================================================== */
+.atendimento { padding: 80px 0; }
+.atendimento h2 { font-size: 2.2rem; color: var(--cor-branco); }
+
+.grid-funcionarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+.card-funcionario {
+    background-color: var(--cor-fundo-card); padding: 30px; border-radius: 12px; text-align: center;
+    border: 1px solid #222; position: relative;
+}
+.foto-funcionario {
+    width: 80px; height: 80px; background-color: #222; border-radius: 50%;
+    margin: 0 auto 20px; display: flex; justify-content: center; align-items: center;
+    font-size: 2rem; color: var(--cor-texto-mutado); border: 2px solid var(--cor-neon);
+}
+
+.card-funcionario h3 { color: var(--cor-branco); margin-bottom: 5px; }
+.especialidade { color: var(--cor-texto-mutado); font-size: 0.9rem; margin-bottom: 15px; height: 40px; }
+
+.status { font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.bolinha-online { width: 10px; height: 10px; background-color: var(--cor-whatsapp); border-radius: 50%; box-shadow: 0 0 8px var(--cor-whatsapp); }
+
+.btn-zap {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background-color: var(--cor-whatsapp); color: #FFF; text-decoration: none;
+    padding: 12px; border-radius: 6px; font-weight: 700; transition: 0.3s; width: 100%;
+}
+.btn-zap:hover { background-color: #1DA851; transform: scale(1.03); }
+.linha-geral { background-color: #333; color: var(--cor-branco); }
+.linha-geral:hover { background-color: #444; }
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+.footer-dark { padding: 40px 0; border-top: 1px solid #222; background-color: #050505; }
+.footer-dark h2 { color: var(--cor-branco); letter-spacing: 2px; margin-bottom: 10px; }
+.footer-dark h2 span { color: var(--cor-neon); }
+
+/* --- CLASSES JS --- */
+.oculto { opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s; }
+.mostrar { opacity: 1; transform: translateY(0); }
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .hero-texto h1 { font-size: 2.5rem; }
+    .hero { text-align: center; justify-content: center; }
+}
